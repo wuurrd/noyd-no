@@ -3,10 +3,10 @@ import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 import clsx from "clsx";
 import { Form, Link, useLocation } from "@remix-run/react";
-import * as PI from "@phosphor-icons/react";
+import { House } from "@phosphor-icons/react/dist/csr/House";
 import { ReactNode, RefObject, useEffect, useRef, useState } from "react";
 
-export const Home = PI.House;
+export const Home = House;
 //import { UserHomeLayout } from "~/components/components";
 
 const MAX_WIDTH = "max-w-[1280px]";
