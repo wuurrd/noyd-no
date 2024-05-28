@@ -1,0 +1,86 @@
+@import "@fontsource-variable/open-sans/wght.css";
+@import "@fontsource-variable/phudu/wght.css";
+
+body {
+    font-family: "Open Sans Variable", sans-serif;
+}
+
+.phudu {
+    font-family: "Phudu Variable", sans-serif;
+}
+
+.markdown h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    /* margin-bottom: 0.2rem; */
+    /* margin-top: 0.7rem; */
+}
+
+.markdown h1:first-child {
+    margin-top: 0;
+}
+
+.markdown h1 {
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 2rem;
+}
+.markdown h2 {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    font-weight: 600;
+}
+.markdown ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 2em;
+    list-style: disc;
+}
+
+.markdown ol {
+    margin: 0;
+    padding: 0;
+    margin-left: 2em;
+    list-style: decimal;
+}
+
+.markdown,
+.markdown ul,
+.markdown ol {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    line-height: 1.4rem;
+}
+
+.markdown pre {
+    border: 1px solid #369;
+    background: #f9f9f9;
+    padding: 0.4em 0.8em;
+    border-radius: 0.8em;
+}
+
+.markdown p code {
+    border: 1px solid #369;
+    background: #f9f9f9;
+    padding: 0.2em 0.4em;
+    border-radius: 0.4em;
+    display: inline;
+}
+
+.markdown a {
+    color: #369;
+}
+.markdown a:hover {
+    text-decoration: underline;
+}
