@@ -10,7 +10,7 @@ export default function Index() {
       className="flex h-screen w-screen flex-col text-gray-800"
       // style={{ fontFamily: `'Dongle', sans-serif`, fontSize: "4vw" }}
     >
-      <div className="bg-white bg-opacity-60 w-full xl:w-1/2 px-12 h-full relative flex flex-col justify-center gap-[1em]">
+      <div className="bg-white bg-opacity-60 w-full 2xl:w-1/2 px-12 h-full relative flex flex-col justify-center gap-[1em]">
         <div className="flex flex-row gap-1 items-center justify-center">
           <div className="text-center text-[8em] sm:text-[14em]" style={{ fontFamily: `'Dongle', sans-serif` }}>
             nøyd
