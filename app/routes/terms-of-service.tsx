@@ -29,7 +29,7 @@ const termsOfService = `
   Eventuelle tvister som oppstår i forbindelse med disse vilkårene skal først søkes løst gjennom dialog med Accessful AS. Hvis en løsning ikke kan oppnås, kan saken bringes inn for norske domstoler med Oslo tingrett som verneting.
 
   ### Kontaktinformasjon
-  Hvis du har spørsmål om disse brukervilkårene eller våre tjenester, vennligst kontakt oss på tos (alfakrøll) noyd.no.
+  Hvis du har spørsmål om disse brukervilkårene eller våre tjenester, vennligst kontakt oss på _tos(alfakrøll)noyd.no_.
 `;
 
 export default function TermsOfService() {
