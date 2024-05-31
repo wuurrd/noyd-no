@@ -28,10 +28,8 @@ export const UserHomeLayout = ({
       className="m-auto flex h-screen flex-col items-center overflow-auto px-4 md:px-8"
       style={theme.backgroundStyles}
     >
-      <div className="flex w-full flex-col items-center justify-end">
-        <div
-          className={clsx("flex w-full flex-row justify-between border-b py-8 border-black items-center", MAX_WIDTH)}
-        >
+      <div className={clsx("flex w-full flex-col items-center justify-end", MAX_WIDTH)}>
+        <div className={clsx("flex w-full flex-row justify-between border-b py-8 border-black items-center")}>
           <Link to={homeLink} className="phudu text-4xl flex flex-row items-end gap-2">
             <House weight="duotone" />
             <div className="hidden md:flex">{title}</div>
@@ -39,8 +37,7 @@ export const UserHomeLayout = ({
           {header}
         </div>
       </div>
-
-      {children}
+      <div className={clsx("flex w-full flex-col items-center justify-center", MAX_WIDTH)}>{children}</div>
 
       <div className={clsx("flex w-full flex-row border-t border-black", MAX_WIDTH)}>
         <div className={clsx("flex flex-row justify-center text-sm gap-[1rem] p-4 items-center w-full")}>
