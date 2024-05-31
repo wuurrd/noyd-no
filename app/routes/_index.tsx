@@ -15,6 +15,10 @@ export default function Index() {
       </h1>
       <div>Vi jobber med noe nytt og spennende!</div>
       <div>hei@noyd.no</div>
+      <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-row items-center justify-center gap-4 text-sm">
+        <a href="/privacy-policy">Personvernerklæring</a>
+        <a href="/terms-of-service">Brukervilkår</a>
+      </div>
     </div>
   );
 }
