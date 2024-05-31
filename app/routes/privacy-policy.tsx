@@ -44,7 +44,7 @@ Vi behandler personopplysninger i vårt arbeid med å beskytte våre brukere og 
 I enkelte tilfeller er vi pålagt å behandle personopplysninger av hensyn til andre rettslige forpliktelser. Et eksempel på dette er informasjon knyttet til salg, som vi er pliktig til å regnskapsføre og oppbevare i henhold til bokføringsloven. Det rettslige grunnlaget for å behandle personopplysninger til dette formålet er at behandlingen er nødvendig for å oppfylle en rettslig forpliktelse som påhviler oss.
 
 ## Dine rettigheter
-Dersom du ønsker å utøve noen av dine rettigheter, ta kontakt med oss på dpo@noyd.no
+Dersom du ønsker å utøve noen av dine rettigheter, ta kontakt med oss på  dpo (alfakrøll) noyd.no
 
 ### Rett til innsyn i egne opplysninger
 Du kan be om en kopi av alle opplysninger vi behandler om deg. Ta kontakt på epostadressen ovenfor for å bruke innsynsretten din.

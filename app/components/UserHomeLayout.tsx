@@ -41,7 +41,7 @@ export const UserHomeLayout = ({
 
       <div className={clsx("flex w-full flex-row border-t border-black", MAX_WIDTH)}>
         <div className={clsx("flex flex-row justify-center text-sm gap-[1rem] p-4 items-center w-full")}>
-          <a href="/">Nøyd 👍 - En tjeneste fra Accessful AS - Org nr932 366 770</a>
+          <a href="/">Nøyd 👍 - En tjeneste fra Accessful AS - Org nr: 932 366 770</a>
         </div>
       </div>
     </div>
