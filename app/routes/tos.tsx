@@ -1,5 +1,5 @@
 import { redirect } from "@remix-run/node";
 
 export async function loader() {
-  return redirect("/privacy-policy", { status: 301 });
+  return redirect("/terms-of-service", { status: 301 });
 }
