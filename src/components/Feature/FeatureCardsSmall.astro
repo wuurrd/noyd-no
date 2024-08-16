@@ -1,0 +1,95 @@
+---
+/**
+ * * These are small cards with icons, titles, and text. With title first
+ * This looks best with an even number of cards. They are smaller to
+ * use with more cards in the same section. 4 or 6 cards is probably ideal
+ *
+ * ! If you can an error for an icon like "Error: Not Found: "calendar-check" in pack "tabler",
+ * ! You can copy to actual SVG into src/icons and name it however and use similar to below
+ */
+
+import { Icon } from "astro-icon";
+
+// components
+import FeatureCard from "@components/FeatureCard/FeatureCardSmall.astro";
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { useTranslations } from "@js/translationUtils";
+
+interface FeatureData {
+  icon: string;
+  title: string;
+  text: string;
+}
+
+const currLocale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(currLocale);
+
+
+// data
+const featureData: FeatureData[] = [
+  {
+    icon: "tabler/paint",
+    title: t("func_1_title"),
+    text: t("func_1_text"),
+  },
+  {
+    icon: "tabler/heart",
+    title: t("func_2_title"),
+    text: t("func_2_text"),
+  },
+  {
+    icon: "tabler/clock",
+    title: t("func_3_title"),
+    text: t("func_3_text"),
+  },
+  {
+    icon: "tabler/list-check",
+    title: t("func_4_title"),
+    text: t("func_4_text"),
+  },
+  {
+    icon: "tabler/home-heart",
+    title: t("func_5_title"),
+    text: t("func_5_text"),
+  },
+  {
+    icon: "tabler/wand",
+    title: t("func_6_title"),
+    text: t("func_6_text"),
+  },
+];
+---
+
+<section id="feature-cards-small" class="py-12 md:my-12">
+  <div class="site-container relative">
+    <div class="mx-auto mb-10 flex max-w-lg justify-center">
+      <h2 class="h2 text-center">
+        <span class="relative whitespace-nowrap">
+          Vårt løfte til deg
+          <Icon
+            name="stellar/freehand-circle-multi-loop"
+            class="absolute inset-0 -z-10 w-full -translate-y-6 scale-y-50 text-primary-200 sm:-translate-y-8"
+            aria-hidden="true"
+          />
+        </span> 
+      </h2>
+    </div>
+    <div
+      id="trigger-small-cards"
+      class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      {
+        featureData.map((feature, idx) => (
+          <FeatureCard
+            title={feature.title}
+            text={feature.text}
+            icon={feature.icon}
+            data-aos="fade-up"
+            data-aos-delay={0.15 * idx}
+            data-aos-trigger="#trigger-small-cards"
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
