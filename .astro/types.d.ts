@@ -152,6 +152,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"nb/ferie/index.mdx": {
+	id: "nb/ferie/index.mdx";
+  slug: "nb/ferie";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "nb/fordelingsnøkkel/index.mdx": {
 	id: "nb/fordelingsnøkkel/index.mdx";
   slug: "nb/fordelingsnøkkel";
@@ -162,6 +169,13 @@ declare module 'astro:content' {
 "nb/fremleie-utleie/index.mdx": {
 	id: "nb/fremleie-utleie/index.mdx";
   slug: "nb/fremleie-utleie";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"nb/lovbrudd/index.mdx": {
+	id: "nb/lovbrudd/index.mdx";
+  slug: "nb/lovbrudd";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
