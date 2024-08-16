@@ -152,9 +152,51 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"nb/fordelingsnøkkel/index.mdx": {
+	id: "nb/fordelingsnøkkel/index.mdx";
+  slug: "nb/fordelingsnøkkel";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"nb/fremleie-utleie/index.mdx": {
+	id: "nb/fremleie-utleie/index.mdx";
+  slug: "nb/fremleie-utleie";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"nb/stemmegivning-mindretallsvern/index.mdx": {
+	id: "nb/stemmegivning-mindretallsvern/index.mdx";
+  slug: "nb/stemmegivning-mindretallsvern";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"nb/stemmelikhet/index.mdx": {
+	id: "nb/stemmelikhet/index.mdx";
+  slug: "nb/stemmelikhet";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "nb/styreansvar/index.mdx": {
 	id: "nb/styreansvar/index.mdx";
   slug: "nb/styreansvar";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"nb/styreforsikring/index.mdx": {
+	id: "nb/styreforsikring/index.mdx";
+  slug: "nb/styreforsikring";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"nb/styreleder-trekker-seg/index.mdx": {
+	id: "nb/styreleder-trekker-seg/index.mdx";
+  slug: "nb/styreleder-trekker-seg";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
