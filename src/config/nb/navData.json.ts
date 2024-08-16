@@ -12,7 +12,7 @@ import { getAllPosts, countItems, sortByValue } from "@js/blogUtils";
 import { humanize } from "@js/textUtils";
 
 // get the categories used in blog posts, to put into navbar
-const posts = await getAllPosts("en");
+const posts = await getAllPosts("nb");
 const allCategories = posts.map((post) => post.data.categories).flat();
 const countedCategories = countItems(allCategories);
 const processedCategories = sortByValue(countedCategories);

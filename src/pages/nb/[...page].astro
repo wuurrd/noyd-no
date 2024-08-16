@@ -13,16 +13,13 @@ import { filterCollectionByLanguage } from "@js/localeUtils";
 import { defaultLocale } from "@config/siteSettings.json";
 
 export async function getStaticPaths() {
-  const otherPages: CollectionEntry<"otherPages">[] = await getCollection(
-    "otherPages",
-    ({ data }) => {
-      // filter out draft pages
-      return data.draft !== true;
-    },
-  );
+  const otherPages: CollectionEntry<"otherPages">[] = await getCollection("otherPages", ({ data }) => {
+    // filter out draft pages
+    return data.draft !== true;
+  });
 
   // get rid of pages from other languages and remove locale from slug
-  const filteredPages = filterCollectionByLanguage(otherPages, "fr");
+  const filteredPages = filterCollectionByLanguage(otherPages, "nb");
 
   return filteredPages.map((page) => ({
     params: { page: page.slug },
@@ -44,9 +41,7 @@ const { title, description } = page.data;
       <h1 class="h1">{title}</h1>
     </div>
     <div class="mx-auto max-w-3xl">
-      <div
-        class="text-base-content prose mt-10 max-w-none text-sm md:text-base"
-      >
+      <div class="text-base-content prose mt-10 max-w-none text-sm md:text-base">
         <Content components={{ a: ExternalLink }} />
       </div>
     </div>

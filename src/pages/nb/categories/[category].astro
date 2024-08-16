@@ -1,8 +1,5 @@
 ---
-import {
-  type InferGetStaticPropsType,
-  type InferGetStaticParamsType,
-} from "astro";
+import { type InferGetStaticPropsType, type InferGetStaticParamsType } from "astro";
 
 // main layout
 import BaseLayout from "@layouts/BaseLayout.astro";
@@ -21,7 +18,7 @@ import { defaultLocale } from "@config/siteSettings.json";
 
 // generate pagination for tag pages if there are a bunch of posts for a single tag
 export async function getStaticPaths() {
-  const posts = await getAllPosts("fr");
+  const posts = await getAllPosts("nb");
   const allCategories = posts.map((post) => post.data.categories).flat();
   const countedCategories = countItems(allCategories);
   const processedCategories = sortByValue(countedCategories);
@@ -41,9 +38,7 @@ const currLocale = getLocaleFromUrl(Astro.url);
 const posts = await getAllPosts(currLocale);
 const filteredPosts = posts.filter((post) => {
   // make sure to slugify them for comparison
-  const slugifiedCategory = post.data.categories.map((category) =>
-    slugify(category),
-  );
+  const slugifiedCategory = post.data.categories.map((category) => slugify(category));
 
   return slugifiedCategory.includes(category);
 });
@@ -55,20 +50,14 @@ const filteredPosts = posts.filter((post) => {
 >
   <section class="site-container pt-36 md:pt-44">
     <h1 class="h1 text-center">
-      <span class="text-primary-600"
-        >{humanize(category).toLowerCase()}</span
-      >
+      <span class="text-primary-600">{humanize(category)}</span>
     </h1>
     <div class="mt-6 flex justify-center">
       <CategoryCloud />
     </div>
 
     <div class="mt-20 grid gap-4 gap-y-12 md:mt-28">
-      {
-        filteredPosts.map((post) => (
-          <PostCardFull post={post} showDescription={true} />
-        ))
-      }
+      {filteredPosts.map((post) => <PostCardFull post={post} showDescription={true} />)}
     </div>
   </section>
 </BaseLayout>

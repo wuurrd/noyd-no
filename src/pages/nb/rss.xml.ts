@@ -11,7 +11,7 @@ import { getTranslatedData } from "@js/translationUtils";
 const siteData = getTranslatedData("siteData", defaultLocale);
 
 // you can switch the RSS locale here to something else if desired
-const rssLocale = "fr";
+const rssLocale = "nb";
 
 // this is needed for getAuthorName() and getAuthorEmail() below
 const authors: CollectionEntry<"authors">[] = await getCollection("authors");
@@ -42,9 +42,7 @@ export async function GET(context) {
       title: post.data.title,
       description: post.data.description,
       pubDate: post.data.pubDate,
-      author: `${getAuthorEmail(post.data.authors[0].slug)} (${getAuthorName(
-        post.data.authors[0].slug,
-      )})`,
+      author: `${getAuthorEmail(post.data.authors[0].slug)} (${getAuthorName(post.data.authors[0].slug)})`,
 
       // custom data example, define in XML tags
       // this adds the blog post image
