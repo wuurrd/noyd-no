@@ -92,6 +92,7 @@ export const textTranslations = {
     func_5_text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nesciunt quia quibusdam`,
     func_6_title: "Lorem ipsum",
     func_6_text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nesciunt quia quibusdam`,
+    location_text: `Location & Contact`,
   },
   nb: {
     hero_description:
@@ -138,6 +139,7 @@ Vi bryr oss om miljøet. Vår plattform er designet med bærekraft i tankene, og
     func_5_text: `Vi forstår at ingen boligfellesskap er like. Derfor lover vi at våre løsninger kan tilpasses dine spesifikke behov, slik at de fungerer best mulig for deg.`,
     func_6_title: "Bærekraft i fokus",
     func_6_text: `Vi bryr oss om miljøet. Vår plattform er designet med bærekraft i tankene, og vi jobber kontinuerlig med å redusere vårt karbonavtrykk, samtidig som vi hjelper deg å gjøre det samme.`,
+    location_text: `Kontaktinformasjon`,
   },
 } as const;
 
