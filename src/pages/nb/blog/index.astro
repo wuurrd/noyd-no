@@ -14,13 +14,10 @@ const currLocale = getLocaleFromUrl(Astro.url);
 const posts = await getAllPosts(currLocale);
 ---
 
-<BaseLayout
-  title="Our Blog Posts"
-  description="Learn from our blog posts about web development, design, and more."
->
+<BaseLayout title="Nøyd bloggen" description="Nyttige tips for styremedlemmer i Nøyds blogg">
   <section class="site-container pt-36 md:pt-44">
     <h1 class="h1 text-center">
-      Helpful tips from <span class="text-primary-600">us</span>
+      Fornøyd med <span class="text-primary-600">Nøyd</span>
     </h1>
     <div class="mt-6 flex justify-center">
       <CategoryCloud />
