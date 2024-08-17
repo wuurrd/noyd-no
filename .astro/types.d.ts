@@ -166,6 +166,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"nb/forretningsfører/index.mdx": {
+	id: "nb/forretningsfører/index.mdx";
+  slug: "nb/forretningsfører";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"nb/forsikring/index.mdx": {
+	id: "nb/forsikring/index.mdx";
+  slug: "nb/forsikring";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "nb/fremleie-utleie/index.mdx": {
 	id: "nb/fremleie-utleie/index.mdx";
   slug: "nb/fremleie-utleie";
@@ -173,9 +187,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"nb/konflikter/index.mdx": {
+	id: "nb/konflikter/index.mdx";
+  slug: "nb/konflikter";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "nb/lovbrudd/index.mdx": {
 	id: "nb/lovbrudd/index.mdx";
   slug: "nb/lovbrudd";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"nb/mistillit/index.mdx": {
+	id: "nb/mistillit/index.mdx";
+  slug: "nb/mistillit";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -211,6 +239,13 @@ declare module 'astro:content' {
 "nb/styreleder-trekker-seg/index.mdx": {
 	id: "nb/styreleder-trekker-seg/index.mdx";
   slug: "nb/styreleder-trekker-seg";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"nb/vedlikeholdsfond/index.mdx": {
+	id: "nb/vedlikeholdsfond/index.mdx";
+  slug: "nb/vedlikeholdsfond";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
