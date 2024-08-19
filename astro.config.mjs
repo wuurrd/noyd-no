@@ -7,6 +7,7 @@ import AutoImport from "astro-auto-import";
 import react from "@astrojs/react";
 import keystatic from "@keystatic/astro";
 import netlify from "@astrojs/netlify";
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -47,6 +48,11 @@ export default defineConfig({
     keystatic(),
     tailwind(),
     sitemap(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
     compress({
       HTML: {
         "html-minifier-terser": {
