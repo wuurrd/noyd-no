@@ -76,5 +76,14 @@ const {
   noindex={noindex}
 />
 
+<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-4V5JSBPXVE"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4V5JSBPXVE');
+</script>
+
 <!-- no fallback as I saw issues with firefox fallback -->
 {siteSettings.useViewTransitions && <ViewTransitions fallback="none" />}
