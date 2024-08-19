@@ -29,9 +29,7 @@ const siteData = getTranslatedData("siteData", currLocale);
         <p>{siteData.contact.address1}</p>
         <p>{siteData.contact.address2}</p>
         <p>
-          <a href={`tel:${siteData.contact.phone}`} class="transition hover:text-primary-500 hover:underline"
-            >{siteData.contact.phone}</a
-          >
+          Org. Nr: {siteData.contact.orgNo}
         </p>
         <a href={`mailto:${siteData.contact.email}`} class="transition hover:text-primary-500 hover:underline"
           >{siteData.contact.email}</a

@@ -1,7 +1,6 @@
 import { type teamMember } from "@config/types/configDataTypes";
 
 import Virginia from "@images/ashton_blackwell.jpg";
-import Victra from "@images/nicola_harris.jpg";
 import Darrow from "@images/nic_fassbender.jpg";
 
 export const teamData: teamMember[] = [
@@ -21,14 +20,6 @@ export const teamData: teamMember[] = [
     bio: `I grew up in the suburbs of Chicago. I was a competitive swimmer for 12 years and
       played water polo in college. I graduated from the University of Illinois in 2012.
     `,
-  },
-  {
-    image: Victra,
-    name: "Victra Julii",
-    title: "Project Estimator",
-    bio: `I'm from the south side of Chicago. I graduated from the University of Illinois in 2013.
-      I've been working in the paint industry ever since. I’m a huge fan of the outdoors and I love to travel.
-      `,
   },
 ];
 

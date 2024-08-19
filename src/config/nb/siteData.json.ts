@@ -12,7 +12,7 @@ const siteData: SiteDataProps = {
   contact: {
     address1: "Nedre Huseby 7b",
     address2: "1482 Nittedal",
-    phone: "Org.nr. 932 366 770",
+    orgNo: "932 366 770",
     email: "hei@noyd.no",
   },
 

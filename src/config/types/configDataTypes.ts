@@ -7,7 +7,7 @@ export interface SiteDataProps {
     // used for contact page and footer
     address1: string; // contact address (line 1)
     address2: string; // contact address (line 2)
-    phone: string; // contact phone number
+    orgNo: string;
     email: string; // contact email address
   };
   author: {

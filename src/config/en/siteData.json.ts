@@ -10,17 +10,17 @@ const siteData: SiteDataProps = {
 
   // used on contact page and footer
   contact: {
-    address1: "1234 Main Street",
-    address2: "New York, NY 10001",
-    phone: "(123) 456-7890",
-    email: "creator@cosmicthemes.com",
+    address1: "Nedre Huseby 7b",
+    address2: "1482 Nittedal",
+    orgNo: "932 366 770",
+    email: "hei@noyd.no",
   },
 
   // Your information for blog post purposes
   author: {
-    name: "Cosmic Themes",
-    email: "creator@cosmicthemes.com",
-    twitter: "Cosmic_Themes",
+    name: "Nøyd",
+    email: "hei@noyd.no",
+    twitter: "",
   },
 
   // default image for meta tags if the page doesn't have an image already
