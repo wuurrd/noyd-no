@@ -14,15 +14,12 @@ const currLocale = getLocaleFromUrl(Astro.url);
 const siteData = getTranslatedData("siteData", currLocale);
 ---
 
-<BaseLayout
-  title="Contact Me"
-  description="Get in touch! Contact information for Blogsmith."
->
+<BaseLayout title="Contact Me" description="Get in touch! Contact information for Blogsmith.">
   <div class="site-container mx-auto pt-36 md:pt-44">
     <h1 class="h1 text-center">Contact Us</h1>
     <p class="description mx-auto mt-6 max-w-2xl text-center">
-      When you fill out the form below, we will contact you to set up a time and
-      take a look at your painting project. We look forward to meeting you!
+      When you fill out the form below, we will contact you to set up a time and take a look at your painting project.
+      We look forward to meeting you!
     </p>
     <div class="mt-20 grid gap-8 lg:grid-cols-3">
       <!-- Contact info -->
@@ -35,15 +32,11 @@ const siteData = getTranslatedData("siteData", currLocale);
         <p>{siteData.contact.address1}</p>
         <p>{siteData.contact.address2}</p>
         <p>
-          Ph: <a
-            href={`tel:${siteData.contact.phone}`}
-            class="transition hover:text-primary-500 hover:underline"
+          Ph: <a href={`tel:${siteData.contact.phone}`} class="transition hover:text-primary-500 hover:underline"
             >{siteData.contact.phone}</a
           >
         </p>
-        <a
-          href="mailto:example@email.com"
-          class="transition hover:text-primary-500 hover:underline"
+        <a href={`mailto:${siteData.contact.email}`} class="transition hover:text-primary-500 hover:underline"
           >{siteData.contact.email}</a
         >
       </div>
