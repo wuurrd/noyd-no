@@ -1,0 +1,30 @@
+---
+// layout
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+// components
+import PostCardFull from "@components/PostCard/PostCardFull.astro";
+import CategoryCloud from "@components/CategoryCloud/CategoryCloud.astro";
+
+// utils
+import { getAllPosts } from "@js/blogUtils";
+import { getLocaleFromUrl } from "@js/localeUtils";
+
+const currLocale = getLocaleFromUrl(Astro.url);
+const posts = await getAllPosts(currLocale);
+---
+
+<BaseLayout title="Nøyd bloggen" description="Nyttige tips for styremedlemmer i Nøyds blogg">
+  <section class="site-container pt-36 md:pt-44">
+    <h1 class="h1 text-center">
+      Fornøyd med <span class="text-primary-600">Nøyd</span>
+    </h1>
+    <div class="mt-6 flex justify-center">
+      <CategoryCloud />
+    </div>
+
+    <div class="mt-20 grid gap-4 gap-y-12 md:mt-28">
+      {posts.map((post) => <PostCardFull post={post} showDescription={true} />)}
+    </div>
+  </section>
+</BaseLayout>
