@@ -1,0 +1,20 @@
+---
+// main layout
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+// components
+import Button from "@components/Button/Button.astro";
+
+import TermsOfService from "../content/terms-of-service/index.mdx";
+---
+
+
+<BaseLayout title="Brukervilkår" description="Brukervilkår" noindex={true}>
+  <section class="site-container prose pt-24 md:pt-36">
+    <div class="w-full rounded-xl bg-base-200/50 py-20 md:py-32">
+      <div class="mx-auto max-w-xl px-4">
+        <TermsOfService />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
