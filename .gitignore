@@ -5,5 +5,3 @@ node_modules
 .env
 .vercel
 dist
-.netlify
-.astro
