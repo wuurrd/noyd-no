@@ -11,8 +11,8 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://noyd.no",
-  output: "hybrid",
+  site: "https://www.noyd.no",
+  output: "server",
   adapter: netlify({
     imageCDN: false,
   }),

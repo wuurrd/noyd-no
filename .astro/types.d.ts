@@ -354,6 +354,27 @@ declare module 'astro:content' {
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".mdx"] };
+"no/elbillading-og-fakturering/index.mdx": {
+	id: "no/elbillading-og-fakturering/index.mdx";
+  slug: "no/elbillading-og-fakturering";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".mdx"] };
+"no/kommunikasjon/index.mdx": {
+	id: "no/kommunikasjon/index.mdx";
+  slug: "no/kommunikasjon";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".mdx"] };
+"no/styrearbeid/index.mdx": {
+	id: "no/styrearbeid/index.mdx";
+  slug: "no/styrearbeid";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".mdx"] };
 };
 "terms-of-service": {
 "index.mdx": {
