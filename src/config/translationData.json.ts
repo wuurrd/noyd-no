@@ -104,13 +104,14 @@ export const textTranslations = {
     // services
     services_title: "Se hva vi kan gjøre for deg",
     services_1_title: "Effektiv håndtering av styrearbeid",
-    services_1_details: `NØYD gir styremedlemmer et kraftig sett med verktøy som forenkler og organiserer deres arbeidsoppgaver. Med vår løsning kan styret opprette og tildele oppgaver, følge med på fremdrift og sikre at ingenting blir oversett. Kalenderfunksjonen gir en samlet oversikt over møter, frister og andre viktige datoer, slik at alle er på samme side. Gjøremålslistene hjelper styremedlemmer med å prioritere oppgaver og holde seg på sporet, noe som sikrer at styrearbeidet utføres effektivt og innenfor tidsrammene.`,
+    services_1_details: `Nøyd gir styremedlemmer et kraftig sett med verktøy som forenkler og organiserer deres arbeidsoppgaver. Med vår løsning kan styret opprette og tildele oppgaver, følge med på fremdrift og sikre at ingenting blir oversett. Kalenderfunksjonen gir en samlet oversikt over møter, frister og andre viktige datoer, slik at alle er på samme side. Gjøremålslistene hjelper styremedlemmer med å prioritere oppgaver og holde seg på sporet, noe som sikrer at styrearbeidet utføres effektivt og innenfor tidsrammene.`,
 
     services_2_title: "Selvbetjeningsportal for beboere",
     services_2_details: `Den intuitive selvbetjeningsportalen gir beboerne enkel tilgang til verktøyene de trenger for å håndtere sin egen informasjon og holde seg informert. Beboerne kan oppdatere kontaktinformasjonen sin direkte, slik at de alltid er sikre på at de får viktig kommunikasjon fra styret. De som eier elbiler, kan også følge med på deres ladestatistikk, noe som gir dem innsikt i forbruket sitt. I tillegg gir portalen tilgang til nyheter og oppdateringer fra styret, slik at beboerne alltid er oppdatert på hva som skjer i deres boligfellesskap.`,
 
     services_3_title: "Enkel og effektiv kommunikasjon",
-    services_3_details: `Effektiv kommunikasjon er nøkkelen til et velfungerende styre, og NØYD tilbyr flere verktøy for å sikre god dialog mellom styremedlemmer og beboere. Integrerte meldingssystemer gjør det enkelt for styret å kommunisere internt og eksternt, enten det er gjennom direkte meldinger, e-poster, eller automatiske varsler. Dette sørger for at alle er informert om nye oppgaver, møter eller endringer. I tillegg gjør funksjonen for dokumentdeling det mulig å dele viktige dokumenter som møtereferater og regnskapsrapporter på en trygg og tilgjengelig måte, slik at alle relevante parter alltid har tilgang til nødvendig informasjon.`,
+    services_3_details:
+      "Effektiv kommunikasjon er nøkkelen til et velfungerende styre, og Nøyd tilbyr verktøy som sikrer god dialog mellom styremedlemmer og beboere. Integrerte meldingssystemer gjør det enkelt å kommunisere internt og eksternt via meldinger, e-post eller varsler, slik at alle holdes informert om oppgaver, møter eller endringer. Dokumentdelingsfunksjonen gjør det trygt og enkelt å dele viktige dokumenter som møtereferater og regnskapsrapporter, slik at alle relevante parter har tilgang til nødvendig informasjon.",
 
     // non functional promises
     /*

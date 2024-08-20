@@ -6,7 +6,7 @@ const siteData: SiteDataProps = {
   // Your website's title and description (meta fields)
   title: "Nøyd - Effektiv styring, fornøyde beboere",
   description:
-    "Nøyd hjelper styremedlemmer og forvaltere av bygårder og borettslag med å utføre sitt arbeid mer effektivt. Vi tilbyr verktøy for styrearbeid som oppgaver, kalender og gjøremålslister, samt en selvbetjeningsportal for beboerne. Gjennom vår plattform kan beboerne oppdatere kontaktinformasjon, se statistikk over elbillading, lese nyheter og mer. Med NØYD blir styringen enklere og beboerne mer fornøyde.",
+    "Nøyd hjelper styremedlemmer og forvaltere av bygårder og borettslag med å utføre sitt arbeid mer effektivt. Vi tilbyr verktøy for styrearbeid som oppgaver, kalender og gjøremålslister, samt en selvbetjeningsportal for beboerne. Gjennom vår plattform kan beboerne oppdatere kontaktinformasjon, se statistikk over elbillading, lese nyheter og mer. Med Nøyd blir styringen enklere og beboerne mer fornøyde.",
 
   // used on contact page and footer
   contact: {

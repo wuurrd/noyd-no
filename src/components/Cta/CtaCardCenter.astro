@@ -16,9 +16,7 @@ const currLocale = getLocaleFromUrl(Astro.url);
 
 <section id="cta" class="my-24 py-8 md:my-36">
   <div class="site-container">
-    <div
-      class="relative h-full w-full overflow-hidden rounded-xl border border-primary-300"
-    >
+    <div class="relative h-full w-full overflow-hidden rounded-xl border border-primary-300">
       <!-- bottom left blob -->
       <Icon
         name="stellar/blob-1"
@@ -58,15 +56,12 @@ const currLocale = getLocaleFromUrl(Astro.url);
               du på?
             </h2>
             <p class="description mt-6">
-              Er du klar til å se hvor enkelt det kan være å administrere din boligforening? Book en gratis demo i dag, og la oss vise deg hvordan NØYD kan gjøre hverdagen enklere for både styret og beboerne.
+              Er du klar til å se hvor enkelt det kan være å administrere din boligforening? Book en gratis demo i dag,
+              og la oss vise deg hvordan Nøyd kan gjøre hverdagen enklere for både styret og beboerne.
             </p>
             <div class="mt-10 flex justify-center">
-              <Button
-                variant="primary"
-                href={getRelativeLocaleUrl(currLocale, "/contact")}
-                arrow="right"
-              >
-              Kontakt oss for et uforpliktende tilbud
+              <Button variant="primary" href={getRelativeLocaleUrl(currLocale, "/contact")} arrow="right">
+                Kontakt oss for et uforpliktende tilbud
               </Button>
             </div>
           </div>

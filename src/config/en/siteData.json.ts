@@ -6,7 +6,7 @@ const siteData: SiteDataProps = {
   // Your website's title and description (meta fields)
   title: "Noyd - Efficient management, satisfied residents",
   description:
-    "Noyd helps board members and managers of buildings and homeowner associations perform their tasks more efficiently. We provide tools for board work such as tasks, calendar, and to-do lists, along with a self-service portal for residents. Through our platform, residents can update their contact information, view electric vehicle charging stats, read news, and more. With NØYD, management becomes easier and residents more satisfied.",
+    "Noyd helps board members and managers of buildings and homeowner associations perform their tasks more efficiently. We provide tools for board work such as tasks, calendar, and to-do lists, along with a self-service portal for residents. Through our platform, residents can update their contact information, view electric vehicle charging stats, read news, and more. With Nøyd, management becomes easier and residents more satisfied.",
 
   // used on contact page and footer
   contact: {
