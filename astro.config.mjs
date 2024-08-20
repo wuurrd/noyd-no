@@ -8,13 +8,14 @@ import react from "@astrojs/react";
 import keystatic from "@keystatic/astro";
 import netlify from "@astrojs/netlify";
 import partytown from "@astrojs/partytown";
-import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.noyd.no",
-  output: "server",
-  adapter: vercel(),
+  output: "hybrid",
+  adapter: netlify({
+    imageCDN: false,
+  }),
   redirects: {
     "/admin": "/keystatic",
   },
