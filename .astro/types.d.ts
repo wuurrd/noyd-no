@@ -302,6 +302,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"otherPages">
 } & { render(): Render[".mdx"] };
 };
+"privacy-policy": {
+"index.mdx": {
+	id: "index.mdx";
+  slug: "index";
+  body: string;
+  collection: "privacy-policy";
+  data: any
+} & { render(): Render[".mdx"] };
+};
 "services": {
 "en/deck-and-fence-staining/index.mdx": {
 	id: "en/deck-and-fence-staining/index.mdx";
@@ -344,6 +353,15 @@ declare module 'astro:content' {
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
+} & { render(): Render[".mdx"] };
+};
+"terms-of-service": {
+"index.mdx": {
+	id: "index.mdx";
+  slug: "index";
+  body: string;
+  collection: "terms-of-service";
+  data: any
 } & { render(): Render[".mdx"] };
 };
 

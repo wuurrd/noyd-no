@@ -24,8 +24,8 @@ const today = new Date();
     <div class="grid gap-4 sm:grid-cols-2">
       <div class="mt-6 flex flex-col items-start gap-4">
         <SiteLogo />
-        <div class="">
-          <Button variant="primary" href={getRelativeLocaleUrl(currLocale, "/contact")}>Få et uforpliktende tilbud</Button>
+        <div class="whitespace-nowrap">
+          <Button variant="primary" href={getRelativeLocaleUrl(currLocale, "/contact")}>Kontakt oss</Button>
         </div>
         <div class="hidden text-sm opacity-80 md:block">
           &copy; {today.getFullYear()}
