@@ -16,7 +16,9 @@
       "@videos/*": ["src/assets/videos/*"],
       "@/*": ["src/*"]
     },
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "target": "ESNext",
+    "types": ["vite/client"]
   },
   "exclude": ["dist"]
 }
