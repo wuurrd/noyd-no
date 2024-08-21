@@ -58,7 +58,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        "Poppins",
+        "PT Sans",
         "BlinkMacSystemFont",
         "-apple-system",
         "Segoe UI",
@@ -83,15 +83,7 @@ module.exports = {
         "Segoe UI Emoji",
         "Segoe UI Symbol",
       ],
-      mono: [
-        "SFMono-Regular",
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        "Liberation Mono",
-        "Courier New",
-        "monospace",
-      ],
+      mono: ["SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],

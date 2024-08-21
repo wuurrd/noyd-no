@@ -18,46 +18,24 @@ export interface Props {
   noindex?: boolean;
 }
 
-const {
-  type = "general",
-  title,
-  description,
-  image,
-  authors,
-  postFrontmatter,
-  noindex = false,
-} = Astro.props as Props;
+const { type = "general", title, description, image, authors, postFrontmatter, noindex = false } = Astro.props as Props;
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
 
-<!-- Poppins Font -->
-<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-  href="https://api.fontshare.com/v2/css?f[]=poppins@401,500,400,700&display=swap"
+  href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
   rel="stylesheet"
 />
 
 <!-- Favicons. Generated from https://realfavicongenerator.net/ -->
 <link rel="icon" href="/favicons/favicon.ico" />
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="/favicons/apple-touch-icon.png"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="/favicons/favicon-32x32.png"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="16x16"
-  href="/favicons/favicon-16x16.png"
-/>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
 <link rel="manifest" href="/favicons/site.webmanifest" />
 <meta name="msapplication-TileColor" content="#2d89ef" />
 <meta name="theme-color" content="#ffffff" />
@@ -79,10 +57,12 @@ const {
 <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-4V5JSBPXVE"></script>
 <script type="text/partytown">
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  gtag('config', 'G-4V5JSBPXVE');
+  gtag("config", "G-4V5JSBPXVE");
 </script>
 
 <!-- no fallback as I saw issues with firefox fallback -->
