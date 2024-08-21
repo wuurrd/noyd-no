@@ -24,7 +24,6 @@ interface FeatureData {
 const currLocale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(currLocale);
 
-
 // data
 const featureData: FeatureData[] = [
   {
@@ -64,20 +63,18 @@ const featureData: FeatureData[] = [
   <div class="site-container relative">
     <div class="mx-auto mb-10 flex max-w-lg justify-center">
       <h2 class="h2 text-center">
+        Hva du kan
         <span class="relative whitespace-nowrap">
-          Vårt løfte til deg
+          forvente fra oss
           <Icon
             name="stellar/freehand-circle-multi-loop"
-            class="absolute inset-0 -z-10 w-full -translate-y-6 scale-y-50 text-primary-200 sm:-translate-y-8"
+            class="absolute inset-0 -z-10 w-full -translate-y-4 scale-y-50 text-primary-200 sm:-translate-y-8"
             aria-hidden="true"
           />
-        </span> 
+        </span>
       </h2>
     </div>
-    <div
-      id="trigger-small-cards"
-      class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
-    >
+    <div id="trigger-small-cards" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {
         featureData.map((feature, idx) => (
           <FeatureCard

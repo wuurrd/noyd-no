@@ -38,14 +38,15 @@ const icon = (() => {
         variant === "danger",
     },
     {
-      "border-info bg-info/10 text-info-content prose-code:bg-info/20 dark:prose-code:bg-info/20":
-        variant === "info",
+      "border-info bg-info/10 text-info-content prose-code:bg-info/20 dark:prose-code:bg-info/20": variant === "info",
     },
   ]}
 >
   <div class="flex items-center gap-2 pb-2">
     <Icon name={icon} class="h-7 w-7" aria-hidden="true" />
-    <p class="text-sm font-bold">{variant.toUpperCase()}</p>
+    <p class="text-sm font-bold">
+      {variant.toUpperCase()}
+    </p>
   </div>
   <slot />
 </div>
