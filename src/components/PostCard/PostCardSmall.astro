@@ -14,27 +14,15 @@ interface Props {
   rest?: any; // catch-all for any additional parameters, such as "aria-label"
 }
 
-const {
-  post,
-  showDescription = false,
-  class: className,
-  ...rest
-} = Astro.props as Props;
-const { title, description, categories, authors, pubDate, heroImage } =
-  post.data;
+const { post, showDescription = false, class: className, ...rest } = Astro.props as Props;
+const { title, description, categories, authors, pubDate, heroImage } = post.data;
 
 const currLocale = getLocaleFromUrl(Astro.url);
 const authorsData = await getEntries(authors);
 ---
 
-<a
-  href={getRelativeLocaleUrl(currLocale, `/blog/${post.slug}/`)}
-  class=`flex group flex-col ${className}`
-  {...rest}
->
-  <div
-    class="shrink-0 justify-center overflow-hidden rounded-lg sm:justify-normal"
-  >
+<a href={getRelativeLocaleUrl(currLocale, `/blog/${post.slug}/`)} class=`flex group flex-col ${className}` {...rest}>
+  <div class="shrink-0 justify-center overflow-hidden rounded-lg sm:justify-normal">
     <figure>
       <Image
         src={heroImage}
@@ -47,13 +35,13 @@ const authorsData = await getEntries(authors);
   </div>
   <div class="w-full">
     <!-- categories -->
-    <div class="mt-1 flex flex-wrap gap-4">
+    <!-- <div class="mt-1 flex flex-wrap gap-4">
       {
         categories.map((category) => (
           <span class="font-medium">{humanize(category)}</span>
         ))
       }
-    </div>
+    </div> -->
 
     <!-- title -->
     <h2 class="text-lg font-medium md:text-xl">
@@ -61,11 +49,7 @@ const authorsData = await getEntries(authors);
     </h2>
 
     <!-- description -->
-    {
-      showDescription && (
-        <p class="description mt-1 text-sm lg:text-base">{description}</p>
-      )
-    }
+    {showDescription && <p class="description mt-1 text-sm lg:text-base">{description}</p>}
 
     <div class="mt-1 flex flex-wrap gap-1 text-sm opacity-80">
       <!-- published date -->

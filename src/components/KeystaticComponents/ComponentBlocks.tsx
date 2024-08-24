@@ -6,19 +6,15 @@ import KeystaticAdmonition from "./KeystaticAdmonition";
 
 const Admonition = wrapper({
   label: "Admonition",
-  ContentView: (props) => (
-    <KeystaticAdmonition variant={props.value.variant}>
-      {props.children}
-    </KeystaticAdmonition>
-  ),
+  ContentView: (props) => <KeystaticAdmonition variant={props.value.variant}>{props.children}</KeystaticAdmonition>,
   schema: {
     variant: fields.select({
       label: "Variant",
       options: [
         { value: "info", label: "Info" },
-        { value: "tip", label: "Tip" },
-        { value: "caution", label: "Caution" },
-        { value: "danger", label: "Danger" },
+        { value: "tip", label: "Tips" },
+        { value: "caution", label: "Advarsel" },
+        { value: "danger", label: "Fare" },
       ],
       defaultValue: "info",
     }),

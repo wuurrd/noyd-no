@@ -5,6 +5,13 @@ interface Props {
   variant: "tip" | "caution" | "danger" | "info";
 }
 
+const variantToLabel = {
+  tip: "Tips",
+  caution: "Advarsel",
+  danger: "Fare",
+  info: "Info",
+};
+
 const { variant } = Astro.props as Props;
 
 // create a switch statement that switches on "variant" and returns the appropriate icon
@@ -45,7 +52,7 @@ const icon = (() => {
   <div class="flex items-center gap-2 pb-2">
     <Icon name={icon} class="h-7 w-7" aria-hidden="true" />
     <p class="text-sm font-bold">
-      {variant.toUpperCase()}
+      {variantToLabel[variant]}
     </p>
   </div>
   <slot />
