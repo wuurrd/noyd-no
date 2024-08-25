@@ -39,13 +39,9 @@ const { navItem } = Astro.props as Props;
     class="nav__dropdown-content invisible absolute left-0 z-10 opacity-0 transition-all"
   >
     <ul
-      class="mt-4 w-[12rem] min-w-[9rem] max-w-[20rem] rounded-md border border-solid border-primary-400/50 bg-base-100 p-1.5 drop-shadow-md"
+      class="mt-4 w-[16rem] min-w-[9rem] max-w-[24rem] rounded-md border border-solid border-primary-400/50 bg-base-100 p-1.5 drop-shadow-md"
     >
-      {
-        navItem.dropdown.map((dropdownItem) => (
-          <NavLink navItem={dropdownItem} class="w-full" />
-        ))
-      }
+      {navItem.dropdown.map((dropdownItem) => <NavLink navItem={dropdownItem} class="w-full" />)}
     </ul>
   </div>
 </li>
@@ -54,15 +50,9 @@ const { navItem } = Astro.props as Props;
   function dropdownToggleSetup() {
     const dropdownMenus = document.querySelectorAll(".nav__dropdown");
     dropdownMenus.forEach((dropdownMenu) => {
-      const dropdownButton = dropdownMenu.querySelector(
-        ".nav__dropdown-button",
-      );
-      const dropdownChevron = dropdownMenu.querySelector(
-        ".nav__dropdown-chevron",
-      );
-      const dropdownContent = dropdownMenu.querySelector(
-        ".nav__dropdown-content",
-      );
+      const dropdownButton = dropdownMenu.querySelector(".nav__dropdown-button");
+      const dropdownChevron = dropdownMenu.querySelector(".nav__dropdown-chevron");
+      const dropdownContent = dropdownMenu.querySelector(".nav__dropdown-content");
       if (dropdownButton && dropdownContent && dropdownChevron) {
         dropdownButton.addEventListener("click", (event) => {
           if (!dropdownMenu.classList.contains("active")) {
@@ -84,10 +74,7 @@ const { navItem } = Astro.props as Props;
 
         // if dropdown menu is open there is a click outside, close the menu
         document.addEventListener("click", (event) => {
-          if (
-            !dropdownMenu.contains(event.target as Node) &&
-            dropdownMenu.classList.contains("active")
-          ) {
+          if (!dropdownMenu.contains(event.target as Node) && dropdownMenu.classList.contains("active")) {
             dropdownMenu.classList.remove("active");
             dropdownButton.setAttribute("aria-expanded", "false");
             dropdownContent.classList.remove("dropdown--fade-in");

@@ -22,40 +22,44 @@ import { type navItem } from "../types/configDataTypes";
 
 // note: 1 level of dropdown is supported
 const navConfig: navItem[] = [
-  // {
-  //   text: "Overview",
-  //   link: "/overview",
-  // },
+  {
+    text: "Forsiden",
+    link: "/",
+  },
 
-  // mega menu
   // {
-  //   text: "Pages",
+  //   text: "Våre tjenester",
   //   megaMenuColumns: [
-  //     // {
-  //     //   title: "Landing Pages",
-  //     //   items: [
-  //     //     {
-  //     //       text: "Landing 1",
-  //     //       link: "/",
-  //     //       icon: "tabler/star",
-  //     //     },
-  //     //     {
-  //     //       text: "Landing 2",
-  //     //       link: "/examples/landing2",
-  //     //       icon: "tabler/diamonds",
-  //     //     },
-  //     //     {
-  //     //       text: "Landing 3",
-  //     //       link: "/examples/landing3",
-  //     //       icon: "tabler/circle",
-  //     //     },
-  //     //   ],
-  //     // },
   //     {
-  //       title: "Blogg",
+  //       title: "Oppdaterte beboerlister",
   //       items: [
   //         {
-  //           text: "Blog Index 1",
+  //           text: "Oppdaterte beboerlister lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  //           link: "/",
+  //           icon: "tabler/star",
+  //         },
+  //         {
+  //           text: "Effektiv kommunikasjon",
+  //           link: "/examples/landing2",
+  //           icon: "tabler/diamonds",
+  //         },
+  //         {
+  //           text: "Oversikt over styrearbeidet",
+  //           link: "/examples/landing3",
+  //           icon: "tabler/circle",
+  //         },
+  //         {
+  //           text: "Fakturering av elbil-lading",
+  //           link: "/examples/landing3",
+  //           icon: "tabler/circle",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       title: "For beboere",
+  //       items: [
+  //         {
+  //           text: "Beboerportal",
   //           link: "/blog",
   //           icon: "tabler/pencil",
   //         },
@@ -76,21 +80,21 @@ const navConfig: navItem[] = [
   //         },
   //       ],
   //     },
-  //     {
-  //       title: "Elements and Forms",
-  //       items: [
-  //         {
-  //           text: "MDX Pages",
-  //           link: "/elements",
-  //           icon: "tabler/wand",
-  //         },
-  //         {
-  //           text: "Contact",
-  //           link: "/contact",
-  //           icon: "tabler/address-book",
-  //         },
-  //       ],
-  //     },
+  //     // {
+  //     //   title: "Elements and Forms",
+  //     //   items: [
+  //     //     {
+  //     //       text: "MDX Pages",
+  //     //       link: "/elements",
+  //     //       icon: "tabler/wand",
+  //     //     },
+  //     //     {
+  //     //       text: "Contact",
+  //     //       link: "/contact",
+  //     //       icon: "tabler/address-book",
+  //     //     },
+  //     //   ],
+  //     // },
   //     // {
   //     //   title: "Other Pages",
   //     //   items: [
@@ -126,23 +130,27 @@ const navConfig: navItem[] = [
   // },
 
   // regular dropdown
-  // {
-  //   text: "Services",
-  //   dropdown: [
-  //     {
-  //       text: "Exterior Painting",
-  //       link: "/services/exterior-painting",
-  //     },
-  //     {
-  //       text: "Interior Painting",
-  //       link: "/services/interior-painting",
-  //     },
-  //     {
-  //       text: "Deck and Fence",
-  //       link: "/services/deck-and-fence-staining",
-  //     },
-  //   ],
-  // },
+  {
+    text: "Hva kan vi gjøre for deg",
+    dropdown: [
+      {
+        text: "Oppdaterte beboerlister",
+        link: "/services/beboerlister",
+      },
+      {
+        text: "Effektiv kommunikasjon",
+        link: "/services/kommunikasjon",
+      },
+      {
+        text: "Oversikt over styrearbeidet",
+        link: "/services/styrearbeid",
+      },
+      {
+        text: "Få kontroll på elbilkostnader",
+        link: "/services/elbil",
+      },
+    ],
+  },
   {
     text: "Blogg",
     link: "/blog",
