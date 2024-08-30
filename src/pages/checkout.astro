@@ -1,0 +1,72 @@
+---
+export const prerender = false
+
+import Stripe from 'stripe'
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { getTranslatedData } from "@js/translationUtils";
+
+
+const PUBLIC_STRIPE_KEY = import.meta.env.PUBLIC_STRIPE_KEY
+const stripe = new Stripe(import.meta.env.STRIPE_KEY)
+const { origin } = Astro.url
+const session = await stripe.checkout.sessions.create({
+  ui_mode: 'embedded',
+  mode: 'subscription',
+  line_items: [
+    {
+      price: 'price_1PtT5oFUGK0K9XCwEj2yjbEy',
+      quantity: 1,
+    },
+    {
+      price: 'price_1PtaK6FUGK0K9XCwlvr3JMCQ',
+    },
+    {
+      price: 'price_1PtaMrFUGK0K9XCwomm6p1Xj',
+
+    }
+  ],
+  locale: "nb",
+  return_url: `${origin}/return?session_id={CHECKOUT_SESSION_ID}`,
+  automatic_tax: { enabled: true },
+  subscription_data: {
+    "trial_settings": {"end_behavior": {"missing_payment_method": "cancel"}},
+    "trial_period_days": 30,
+  },
+  allow_promotion_codes: true,
+  payment_method_collection: "if_required",
+  custom_fields: [{
+    "key": "customer",
+    "label": {
+        "type": "custom",
+        "custom": "Sameie"
+      },
+      "type": "text",
+    }
+  ]
+});
+
+const currLocale = getLocaleFromUrl(Astro.url);
+const siteData = getTranslatedData("siteData", currLocale);
+
+---
+<BaseLayout title={siteData.title} description={siteData.description}>
+  <section class="site-container pt-36 md:pt-44">
+    <div id="checkout" data-stripe-key={PUBLIC_STRIPE_KEY} data-client-secret={session.client_secret} class="pt-36">
+      <!-- Checkout will insert the payment form here -->
+    </div>
+    <script>
+      import { loadStripe } from '@stripe/stripe-js';
+      const checkoutDiv = document.querySelector('#checkout')
+      const {clientSecret, stripeKey} = checkoutDiv.dataset
+
+      const stripe = await loadStripe(stripeKey);
+      const checkout = await stripe.initEmbeddedCheckout({
+        fetchClientSecret: () => clientSecret
+      });
+
+      // Mount Checkout
+      checkout.mount('#checkout');
+    </script>
+  </section>
+</BaseLayout>

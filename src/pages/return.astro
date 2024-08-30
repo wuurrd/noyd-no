@@ -1,0 +1,39 @@
+---
+export const prerender = false
+
+import Stripe from 'stripe'
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { getTranslatedData } from "@js/translationUtils";
+import { Icon } from "astro-icon";
+
+const stripe = new Stripe(import.meta.env.STRIPE_KEY)
+const sessionID = Astro.url.searchParams.get('session_id')
+
+let session
+try {
+  session = await stripe.checkout.sessions.retrieve(sessionID)
+} catch (e) {
+  return Astro.redirect('/checkout')
+}
+
+
+const currLocale = getLocaleFromUrl(Astro.url);
+const siteData = getTranslatedData("siteData", currLocale);
+const { id, customer_details: { email, name } } = session;
+---
+
+<BaseLayout title={siteData.title} description={siteData.description}>
+  <div class="absolute -z-10 min-h-[60svh] w-full">
+    <Icon
+      name="stellar/two-blobs"
+      class="h-full w-full text-primary-200/50"
+      aria-hidden="true"
+    />
+  </div>
+  <section class="site-container mr-auto gap-8 pb-6 pt-36 md:grid-cols-2 md:pb-20 md:pt-44">
+    <h1 class="h1 text-center">Velkommen til Nøyd!</h1>
+    <p class="text-center text-lg pt-8">Du vil iløpet av noen få minutter få informasjon om innlogging til {email}.</p>
+    <p class="text-center text-lg">Hvis du har noen spørsmål ta kontakt med oss på e-post hei@noyd.no så hjelper vi deg.</p>
+  </section>
+</BaseLayout>
