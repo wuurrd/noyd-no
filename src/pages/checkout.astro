@@ -19,20 +19,16 @@ const session = await stripe.checkout.sessions.create({
       quantity: 1,
     },
     {
-      price: 'price_1Ptd5ZFUGK0K9XCwkMceAeXO',
+      price: 'price_1PuVf1FUGK0K9XCwr0uz0V2M',
     },
     {
-      price: 'price_1PtaMrFUGK0K9XCwomm6p1Xj',
+      price: 'price_1PuVgjFUGK0K9XCwfoyfKnQg',
 
     }
   ],
   locale: "nb",
   return_url: `${origin}/return?session_id={CHECKOUT_SESSION_ID}`,
   automatic_tax: { enabled: true },
-  subscription_data: {
-    "trial_settings": {"end_behavior": {"missing_payment_method": "cancel"}},
-    "trial_period_days": 30,
-  },
   allow_promotion_codes: true,
   payment_method_collection: "if_required",
   custom_fields: [{
@@ -42,6 +38,9 @@ const session = await stripe.checkout.sessions.create({
         "custom": "Sameie"
       },
       "type": "text",
+      "text": {
+      "minimum_length": 3,
+      }
     }
   ]
 });
