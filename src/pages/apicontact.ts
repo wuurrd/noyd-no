@@ -11,6 +11,14 @@ export const POST: APIRoute = async ({ request }) => {
   const phone = data.get("contact-phone");
   const comments = data.get("contact-comments");
 
+
+  // need to misspell the name so it's not picked up by client autofilling
+  const emailHoneypot = data.get("emaiRequired");
+  if (emailHoneypot) {
+    // if it's filled, it's most likely a bot
+    return new Response(null, { status: 302, headers: { location: "/nb/contact_confirm" } });
+  }
+
   if (!name || !company || !email) {
     return new Response(
       JSON.stringify({
